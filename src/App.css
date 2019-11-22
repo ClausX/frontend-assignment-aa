@@ -2,21 +2,156 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
+.App main {
+  background-color: #34495E;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(2px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.movie-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 24px;
+  grid-row-gap: 12px;
 }
+
+.movie-list-item {
+  background-color: #3598DB;
+  padding: 6px;
+  border-radius: 6px;
+  width: 16vmin;
+  height: 14vmin;
+}
+
+.movie-list-item:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+.release-date-text {
+  font-size: 70%;
+}
+
+.movie-view {
+  background-color: #ECF0F1;
+  color: #010101;
+  width: 96vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1vmin 2fr;
+  grid-template-rows: 1fr 1fr 10fr 20px;
+  padding: 6px;
+}
+
+.character-label {
+  font-size: calc(8px + 4vmin);
+  grid-column-start: 1;
+  grid-row-start: 2;
+  text-align: left;
+}
+
+.movie-view .movie-title-label{
+  font-size: calc(12px + 5vmin);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  text-align: left;
+}
+
+.close-button,
+.close-button:focus {
+  float: right;
+  grid-column-start: -1;
+  cursor: pointer;
+}
+
+.character-list {
+  white-space: nowrap;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  column-count: 3;
+  column-gap: 6vmin;
+  font-size: 3vmin;
+  text-align: left;
+  padding: 6px;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 1140px) {
+  .App main {
+    background-color: #34495E;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(2px + 4vh);
+    color: white;
+  }
+
+  .movie-list {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 12px;
+  }
+
+  .movie-list-item {
+    background-color: #3598DB;
+    padding: 6px;
+    border-radius: 6px;
+    width: 94vw;
+    height: 14vh;
+  }
+    
+  .movie-view {
+    background-color: #ECF0F1;
+    color: #010101;
+    width: 96vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1vmin 2fr;
+    grid-template-rows: 1fr 1fr 10fr 20px;
+    padding: 6px;
+  }
+
+  .character-label {
+    font-size: calc(8px + 5vmin);
+    grid-column-start: 1;
+    grid-row-start: 2;
+    text-align: left;
+  }
+
+  .movie-view .movie-title-label{
+    font-size: calc(12px + 6vmin);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    text-align: left;
+  }
+
+  .close-button,
+  .close-button:focus {
+    float: right;
+    grid-column-start: -1;
+    cursor: pointer;
+  }
+
+  .character-list {
+    white-space: nowrap;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    column-count: 1;
+    column-gap: 6vmin;
+    font-size: 5vmin;
+    text-align: left;
+    padding: 6px;
+  }
+
+}
+
